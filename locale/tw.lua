@@ -13,7 +13,7 @@ if ( GetLocale() == "zhTW" ) then
 			["QUdBlue"]= 3,
 			["QUePurple"]= 4,
 			["QUfOrange"]= 5,
-			["QUgRed"]= 6,
+			["QUgYellow"]= 6,
 			["QUhTan"] = 7,
 			["QUhQuest"]= -1 
 		},
@@ -38,7 +38,7 @@ if ( GetLocale() == "zhTW" ) then
 			["QUdBlue"]= "精良 (藍色)",
 			["QUePurple"]= "史詩 (紫色)",
 			["QUfOrange"]= "傳說 (橘色)",
-			["QUgRed"]= "神器 (紅色)",
+			["QUgYellow"]= "神器 (紅色)",
 			["QUhTan"] = "Heirloom (Tan)",
 			["QUhQuest"]= "任務",
 	

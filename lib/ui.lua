@@ -129,6 +129,8 @@ function LootFilter.setRadioButtonValue(button)
 		LootFilterVars[LootFilter.REALMPLAYER].novalue = checked;
  	elseif (name == "OPMarketValue") then
 		LootFilterVars[LootFilter.REALMPLAYER].marketvalue = checked;
+	elseif (name == "OPTransmog") then
+		LootFilterVars[LootFilter.REALMPLAYER].transmog = checked;
 	elseif (name == "OPTooltips") then
 		LootFilterVars[LootFilter.REALMPLAYER].tooltips = checked;
 	elseif (name == "OPNotifyDelete") then

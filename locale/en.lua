@@ -12,7 +12,7 @@ LootFilter.Locale = {
 		["QUdBlue"]= 3,
 		["QUePurple"]= 4,
 		["QUfOrange"]= 5,
-		["QUgRed"]= 6,
+		["QUgYellow"]= 6,
 		["QUhTan"] = 7,
 		["QUhQuest"]= -1 
 	},
@@ -37,7 +37,7 @@ LootFilter.Locale = {
 		["QUdBlue"]= "Rare (Blue)",
 		["QUePurple"]= "Epic (Purple)",
 		["QUfOrange"]= "Legendary (Orange)",
-		["QUgRed"]= "Artifact (Red)",
+		["QUgYellow"]= "Vanity (Yellow)",
 		["QUhTan"] = "Heirloom (Tan)",
 		["QUhQuest"]= "Quest",
 
@@ -151,6 +151,7 @@ LootFilter.Locale = {
 		["TYWeaponWands"]= "Wands",
 		
 		["OPEnable"]= "Enable Loot Filter",
+		["OPTransmog"]= "Enable Transmog filter",
 		["OPCaching"]= "Enable Loot Caching",
 		["OPTooltips"]= "Show tooltips",
 		["OPNotifyDelete"]= "Notify on delete",
@@ -164,7 +165,7 @@ LootFilter.Locale = {
 		["OPOpenVendor"]= "Open when talking to vendor",
 		["OPAutoSell"]= "Automatically start selling",
 		["OPNoValue"]= "Keep items with no (known) value", 
-		["OPMarketValue"]= "Use Auctioneer market prices instead of vendor prices",
+		["OPMarketValue"]= "Use TSM market prices instead of vendor prices",
 		["OPBag0"]= "Backpack",
 		["OPBag1"]= "Bag 1",
 		["OPBag2"]= "Bag 2",

@@ -306,6 +306,17 @@
 							</Anchor>
 						</Anchors>
 					</Frame>
+					<Frame name="LootFilterOPTransmog"
+						inherits="LootFilterOptionTemplate2" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativePoint="TOP"
+								relativeTo="LootFilterFrameTitle">
+								<Offset>
+									<AbsDimension x="-300" y="-95"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Frame>
 					<Frame name="LootFilterOPTooltips"
 						inherits="LootFilterOptionTemplate2" hidden="false">
 						<Anchors>

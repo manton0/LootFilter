@@ -11,7 +11,7 @@ if ( GetLocale() == "deDE" ) then
 			["QUdBlue"]= 3,
 			["QUePurple"]= 4,
 			["QUfOrange"]= 5,
-			["QUgRed"]= 6,
+			["QUgYellow"]= 6,
 			["QUhTan"] = 7,
 			["QUhQuest"]= -1,
 		},
@@ -36,7 +36,7 @@ if ( GetLocale() == "deDE" ) then
 			["QUdBlue"]= "Rar (Blau)",
             ["QUePurple"]= "Episch (Lila)",
 			["QUfOrange"]= "Legend\195\164r (Orange)",
-			["QUgRed"]= "Artefakt (Rot)",
+			["QUgYellow"]= "Artefakt (Rot)",
 			["QUhTan"] = "Heirloom (Tan)",
 			["QUhQuest"]= "Quest",
 

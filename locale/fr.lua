@@ -10,7 +10,7 @@ LootFilter.Locale = {
 			["QUdBlue"]= 3,
 			["QUePurple"]= 4,
 			["QUfOrange"]= 5,
-			["QUgRed"]= 6,
+			["QUgYellow"]= 6,
 			["QUhTan"] = 7,
 			["QUhQuest"]= -1 
 		},
@@ -35,7 +35,7 @@ LootFilter.Locale = {
 			["QUdBlue"]= "Rare (Bleu)",
 			["QUePurple"]= "Epique (Violet)",
 			["QUfOrange"]= "Legendaire (Orange)",
-			["QUgRed"]= "Artefact (Rouge)",
+			["QUgYellow"]= "Artefact (Rouge)",
 			["QUhTan"] = "Heirloom (Tan)",
 			["QUhQuest"]= "Quete",
 	
@@ -143,9 +143,9 @@ LootFilter.Locale = {
 			["TYWeaponPolearms"]= "Armes d'hast",
 			["TYWeaponStaves"]= "Batons",
 			["TYWeaponThrown"]= "Armes de jet",
-			["TYWeaponTwoHandedAxes"]= "Haches à deux mains",
-			["TYWeaponTwoHandedMaces"]= "Masses à deux mains",
-			["TYWeaponTwoHandedSwords"]= "Epees à deux mains",
+			["TYWeaponTwoHandedAxes"]= "Haches ï¿½ deux mains",
+			["TYWeaponTwoHandedMaces"]= "Masses ï¿½ deux mains",
+			["TYWeaponTwoHandedSwords"]= "Epees ï¿½ deux mains",
 			["TYWeaponWands"]= "Baguettes",
 			
 			["OPEnable"]= "Activer Loot Filter",

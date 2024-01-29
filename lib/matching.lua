@@ -5,6 +5,7 @@ function LootFilter.matchProperties(key, value, item, keep)
 --[[	if (LootFilter.openItemIfContainer(item)) then -- check if this is a container item we need to open
 		return LootFilter.Locale.LocText["LTTryopen"];
 	end; --]]
+	-- print("test0")
 	
 	if (string.match(key, "^QU")) then -- quality entry
 		if (item["rarity"] == value) then
@@ -14,6 +15,16 @@ function LootFilter.matchProperties(key, value, item, keep)
 				reason = LootFilter.Locale.LocText["LTQuestItem"];
 			end;
 		end;
+	elseif LootFilterVars[LootFilter.REALMPLAYER].transmog and APPEARANCE_ITEM_INFO[item["id"]] then --Transmog
+		local collectedID = APPEARANCE_ITEM_INFO[item["id"]]:GetCollectedID()
+		if collectedID == item["id"] then -- unlocked
+			Owned = 2
+		elseif collectedID then -- unlocked but from different item
+			Owned = 4
+		else -- unknown == not known
+			Owned = 3
+			reason = "Unknown transmog";
+		end
 	elseif (string.match(key, "^TY")) then -- type entry
 
 		if (string.match(key, "^TY"..item["type"])) and (item["subType"] == value) then
