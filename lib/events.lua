@@ -96,23 +96,26 @@ function LootFilter.OnEvent()
 		--DEFAULT_CHAT_FRAME:AddMessage("Loot Filter - CHAT_MSG_LOOT");
 		--LootFilterVars[LootFilter.REALMPLAYER].itemStack = {};
 
-		local itemLink = string.match(arg1,"|%x+|Hitem:.-|h.-|h|r")
-		--print("found:" .. itemLink)
-		
-		local item = LootFilter.getBasicItemInfo(itemLink);
-		if (item ~= nil) then
-			--print("item ok")
-			if (not LootFilterVars[LootFilter.REALMPLAYER].caching) then
-				--print("item added")
-				table.insert(LootFilterVars[LootFilter.REALMPLAYER].itemStack, item);
-			end;
-			if (GetSellValue) then -- record the value of this item
-				LootFilter.sessionAdd(item);
-				LootFilterVars[LootFilter.REALMPLAYER].session["end"] = time();
-				LootFilter.sessionUpdateValues();
-			end;
-			LootFilter.schedule(1, LootFilter.processItemStack);
-		end; 
+		--use global constant here instead
+		if string.match(arg1, "You") then 
+			local itemLink = string.match(arg1,"|%x+|Hitem:.-|h.-|h|r")
+			--print("found:" .. itemLink)
+			
+			local item = LootFilter.getBasicItemInfo(itemLink);
+			if (item ~= nil) then
+				--print("item ok")
+				if (not LootFilterVars[LootFilter.REALMPLAYER].caching) then
+					--print("item added")
+					table.insert(LootFilterVars[LootFilter.REALMPLAYER].itemStack, item);
+				end;
+				if (GetSellValue) then -- record the value of this item
+					LootFilter.sessionAdd(item);
+					LootFilterVars[LootFilter.REALMPLAYER].session["end"] = time();
+					LootFilter.sessionUpdateValues();
+				end;
+				LootFilter.schedule(1, LootFilter.processItemStack);
+			end; 
+		end
 	end;
 	
 	-- start processing the items we have just looted
@@ -173,7 +176,7 @@ function LootFilter.OnEvent()
 		LootFilterButtonDeleteItems:SetText(LootFilter.Locale.LocText["LTDeleteItems"]);
 	end;
 
-	if (event == "MERCHANT_SHOW") then
+	if (event == "MERCHANT_SHOW") and GetUnitName("npc") ~= "Fix-o-Tron 5000" then
 		LootFilterButtonDeleteItems:SetText(LootFilter.Locale.LocText["LTSellItems"]);
 		LootFilter.processCleaning();
 		if (table.getn(LootFilter.cleanList) > 0) then
